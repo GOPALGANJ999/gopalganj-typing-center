@@ -1,76 +1,346 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Gopalganj Typing & Digital Center — কম্পিউটার, টাইপিং, প্রিন্টিং, অনলাইন আবেদন ও মোবাইল ব্যাংকিং সেবা।">
+<meta name="description" content="Gopalganj Typing & Digital Center - Typing, Computer Compose and Online Services">
 <title>Gopalganj Typing & Digital Center</title>
 <style>
-:root{--navy:#102d50;--blue:#1769aa;--gold:#f4c451;--ink:#172536;--muted:#64748b;--bg:#f4f7fb;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
-a{text-decoration:none;color:inherit}.wrap{width:min(1100px,92%);margin:auto}
-header{background:var(--navy);color:#fff;padding:16px 0;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #071a3025}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;letter-spacing:.4px;font-size:17px}.brand span{color:var(--gold)}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}nav a{opacity:.92}nav a:hover{color:var(--gold)}
-.hero{background:linear-gradient(125deg,#102d50,#1769aa);color:#fff;padding:76px 0 68px;text-align:center}
-.eyebrow{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:13px}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.15;margin:12px 0}.hero h1 span{color:var(--gold)}.hero p{max-width:700px;margin:16px auto;color:#e6eef8;font-size:17px}
-.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:12px 22px;border-radius:9px;font-weight:700}.primary{background:var(--gold);color:#102d50}.secondary{border:1px solid #ffffff80;color:#fff}
-.section{padding:58px 0}.section h2{text-align:center;font-size:30px;margin:0 0 8px;color:var(--navy)}.sub{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:680px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{background:#fff;border:1px solid #e5eaf1;border-radius:15px;padding:22px;box-shadow:0 5px 20px #102d5008}.ico{font-size:28px}.service h3{margin:8px 0 5px;color:var(--navy);font-size:18px}.service p{margin:0;color:var(--muted);font-size:14px}
-.band{background:#eaf1f8;padding:35px 0}.bandbox{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.band h2{margin:0;color:var(--navy)}.pills{display:flex;gap:9px;flex-wrap:wrap}.pill{background:#fff;border:1px solid #dbe5ef;padding:8px 14px;border-radius:30px;font-weight:700;color:var(--navy)}
-.about{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.aboutbox,.contactbox{background:#fff;border:1px solid #e5eaf1;border-radius:16px;padding:26px}.aboutbox h2{text-align:left}.aboutbox p{color:var(--muted)}.highlight{background:var(--navy);color:#fff;border-radius:16px;padding:28px}.highlight h3{margin-top:0;color:var(--gold)}.highlight p{margin-bottom:0;color:#e6eef8}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contactbox h3{color:var(--navy);margin-top:0}.contactbox p{color:var(--muted);margin:8px 0}.contactbox strong{color:var(--ink)}
-footer{background:#0b2038;color:#dbe6f2;text-align:center;padding:24px 0;font-size:14px}footer strong{color:var(--gold)}
-.note{font-size:12px;color:var(--muted);text-align:center;margin-top:18px}
-@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:55px 0}.grid{grid-template-columns:repeat(2,1fr)}.about,.contact{grid-template-columns:1fr}}
-@media(max-width:480px){.grid{grid-template-columns:1fr}.section{padding:42px 0}.brand{font-size:15px}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f3f6fa;color:#263449;line-height:1.7}
+header{background:linear-gradient(135deg,#102b50,#17619b);color:white;text-align:center;padding:35px 15px;border-bottom:5px solid #e5b84b}
+header h1{font-size:clamp(23px,5vw,37px);margin:0}
+header p{margin:8px 0}
+nav{margin-top:20px}
+nav a{display:inline-block;color:white;text-decoration:none;border:1px solid #ffffff77;padding:7px 16px;border-radius:25px;margin:4px}
+main{max-width:1100px;margin:25px auto;padding:0 15px}
+.intro,.contact{background:white;padding:22px;border-radius:14px;margin-bottom:20px;box-shadow:0 3px 15px #0000000b}
+h2{color:#123c68}
+.search{width:100%;padding:14px;border:1px solid #ccd5df;border-radius:10px;font-size:16px;margin:12px 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:16px}
+.service{background:white;border:1px solid #e1e7ef;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px #00000008}
+summary{cursor:pointer;padding:17px;font-weight:bold;color:#123c68;font-size:17px;list-style:none;display:flex;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"＋";margin-left:auto;color:#17619b}
+details[open] summary:after{content:"−"}
+.service-content{padding:0 18px 18px}
+.service-content p{color:#64748b;font-size:14px}
+ul{padding-left:20px;margin:8px 0}
+li{margin:8px 0}
+li a{color:#0865ad;text-decoration:none;font-weight:bold}
+li a:hover{text-decoration:underline}
+.note{background:#fff9e9;padding:15px;border-left:4px solid #e5b84b;margin:20px 0;border-radius:7px;font-size:14px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.contact-item{background:#f4f7fb;padding:14px;border-radius:9px}
+.contact-item b{display:block;color:#123c68}
+footer{background:#102b50;color:white;text-align:center;padding:20px;font-size:14px}
+.hidden{display:none}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-  <div class="brand">GOPALGANJ <span>TYPING & DIGITAL CENTER</span></div>
-  <nav><a href="#home">হোম</a><a href="#services">সেবাসমূহ</a><a href="#about">আমাদের সম্পর্কে</a><a href="#contact">যোগাযোগ</a></nav>
-</div></header>
+
+<header>
+<h1>GOPALGANJ TYPING &amp; DIGITAL CENTER</h1>
+<p>বিশ্বস্ত কম্পিউটার কম্পোজ, টাইপিং ও অনলাইন আবেদন সেবা</p>
+<nav>
+<a href="#services">আমাদের সেবা</a>
+<a href="#contact">যোগাযোগ</a>
+</nav>
+</header>
+
 <main>
-<section class="hero" id="home"><div class="wrap">
-  <div class="eyebrow">YOUR DIGITAL SERVICE DESTINATION</div>
-  <h1>GOPALGANJ<br><span>TYPING & DIGITAL CENTER</span></h1>
-  <p>টাইপিং, কম্পিউটার, অনলাইন আবেদন, প্রিন্টিং এবং ডিজিটাল সেবা—সব এক জায়গায়।</p>
-  <div class="actions"><a class="btn primary" href="#services">সেবাসমূহ দেখুন</a><a class="btn secondary" href="#contact">যোগাযোগ করুন</a></div>
-</div></section>
+<section class="intro">
+<h2>আমাদের প্রতিষ্ঠানে আপনাকে স্বাগতম</h2>
+<p>বাংলা ও ইংরেজি টাইপিং, কম্পিউটার কম্পোজ, সরকারি-বেসরকারি চাকরির আবেদন, অনলাইন ফরম পূরণ, CV তৈরি, প্রিন্টিং, স্ক্যানিংসহ বিভিন্ন ডিজিটাল সেবা প্রদান করা হয়। প্রয়োজনীয় সেবা জানতে নিচের বিভাগগুলোতে ক্লিক করুন।</p>
+</section>
 
-<section class="section" id="services"><div class="wrap">
-  <h2>আমাদের সেবাসমূহ</h2><p class="sub">আপনার প্রয়োজনীয় কম্পিউটার ও ডিজিটাল সেবা যত্নসহকারে দেওয়ার চেষ্টা করি।</p>
-  <div class="grid">
-    <article class="service"><div class="ico">⌨️</div><h3>বাংলা ও ইংরেজি টাইপিং</h3><p>চিঠি, দরখাস্ত, আবেদনপত্র ও প্রয়োজনীয় ডকুমেন্ট টাইপিং।</p></article>
-    <article class="service"><div class="ico">🖥️</div><h3>কম্পিউটার কম্পোজ</h3><p>ডকুমেন্ট তৈরি, সম্পাদনা, ফরম্যাটিং ও প্রিন্টের প্রস্তুতি।</p></article>
-    <article class="service"><div class="ico">📝</div><h3>চাকরির আবেদন</h3><p>চাকরির অনলাইন আবেদন ও প্রয়োজনীয় তথ্য পূরণে সহায়তা।</p></article>
-    <article class="service"><div class="ico">🌐</div><h3>অনলাইন আবেদন</h3><p>সরকারি-বেসরকারি আবেদন, রেজিস্ট্রেশন ও অনলাইন ফরম পূরণ।</p></article>
-    <article class="service"><div class="ico">🎓</div><h3>ভর্তি আবেদন</h3><p>শিক্ষাপ্রতিষ্ঠানে ভর্তি আবেদন ও অনলাইন রেজিস্ট্রেশনে সহায়তা।</p></article>
-    <article class="service"><div class="ico">📄</div><h3>CV ও বায়োডাটা</h3><p>চাকরির উপযোগী CV, বায়োডাটা ও সাধারণ ডকুমেন্ট তৈরি।</p></article>
-    <article class="service"><div class="ico">🖨️</div><h3>প্রিন্টিং</h3><p>প্রয়োজনীয় কাগজপত্রের সাদা-কালো ও রঙিন প্রিন্ট।</p></article>
-    <article class="service"><div class="ico">📑</div><h3>ফটোকপি ও স্ক্যান</h3><p>ডকুমেন্ট ফটোকপি, স্ক্যান ও ডিজিটাল কপি তৈরি।</p></article>
-    <article class="service"><div class="ico">🪪</div><h3>ছবি ও ডকুমেন্ট</h3><p>পাসপোর্ট সাইজ ছবির প্রস্তুতি এবং সাধারণ ছবি এডিটিং।</p></article>
-    <article class="service"><div class="ico">✉️</div><h3>ই-মেইল ও ইন্টারনেট</h3><p>ই-মেইল খোলা, ফাইল পাঠানো ও অনলাইন তথ্য ব্যবহারে সহায়তা।</p></article>
-    <article class="service"><div class="ico">📱</div><h3>মোবাইল ব্যাংকিং</h3><p>বিকাশ, নগদ ও রকেটের অনুমোদিত লেনদেন সেবা।</p></article>
-    <article class="service"><div class="ico">🧾</div><h3>অন্যান্য ডিজিটাল সেবা</h3><p>অনলাইন ফরম, ডকুমেন্ট আপলোড ও প্রয়োজনীয় ডিজিটাল কাজে সহায়তা।</p></article>
-  </div>
-  <p class="note">যে সেবাগুলো আপনার দোকানে চালু থাকবে, শুধু সেগুলোর প্রচার করবেন। মোবাইল ব্যাংকিং সেবা সংশ্লিষ্ট প্রতিষ্ঠানের অনুমোদন ও নিয়ম অনুযায়ী প্রদানযোগ্য।</p>
-</div></section>
+<input class="search" id="search" type="search" placeholder="🔍 আপনার প্রয়োজনীয় সেবা খুঁজুন...">
 
-<section class="band"><div class="wrap bandbox"><h2>মোবাইল ব্যাংকিং সেবা</h2><div class="pills"><span class="pill">বিকাশ</span><span class="pill">নগদ</span><span class="pill">রকেট</span></div></div></section>
+<section class="grid" id="services">
 
-<section class="section" id="about"><div class="wrap about">
-  <div class="aboutbox"><h2>আমাদের সম্পর্কে</h2><p><strong>Gopalganj Typing & Digital Center</strong> একটি কম্পিউটার ও ডিজিটাল সেবা কেন্দ্র। টাইপিং, অনলাইন আবেদন, প্রিন্টিং, ফটোকপি, স্ক্যান এবং অন্যান্য প্রয়োজনীয় কাজে গ্রাহকদের সহযোগিতা করাই আমাদের লক্ষ্য।</p><p>আপনার প্রয়োজনীয় কাজ সহজ ও সুবিধাজনকভাবে সম্পন্ন করতে আমাদের সঙ্গে যোগাযোগ করুন।</p></div>
-  <div class="highlight"><h3>আপনার সকল ডিজিটাল সেবার ঠিকানা</h3><p>এক জায়গায় প্রয়োজনীয় টাইপিং, কম্পিউটার ও অনলাইন সেবা।</p></div>
-</div></section>
+<details class="service">
+<summary>⌨️ ১. বাংলা ও ইংরেজি টাইপিং</summary>
+<div class="service-content">
+<p>চিঠি, দরখাস্ত, আবেদনপত্র ও প্রয়োজনীয় ডকুমেন্ট টাইপিং।</p>
+<ul>
+<li>বাংলা ও ইংরেজি টাইপিং</li>
+<li>সরকারি ও বেসরকারি আবেদনপত্র</li>
+<li>অফিসিয়াল চিঠি ও দরখাস্ত</li>
+<li>প্রতিবেদন ও নোটিশ</li>
+<li>হাতে লেখা কাগজ কম্পিউটারে টাইপ</li>
+</ul>
+</div></details>
 
-<section class="section" id="contact"><div class="wrap">
-  <h2>যোগাযোগ করুন</h2><p class="sub">দোকানে আসার আগে ফোন করে প্রয়োজনীয় সেবা সম্পর্কে জেনে নিতে পারেন।</p>
-  <div class="contact">
-    <div class="contactbox"><h3>দোকানের ঠিকানা</h3><p><strong>Gopalganj Typing & Digital Center</strong></p><p>ঠিকানা: [আপনার দোকানের সম্পূর্ণ ঠিকানা লিখুন]</p><p>মোবাইল: [আপনার মোবাইল নম্বর লিখুন]</p><p>খোলা: [দোকান খোলা ও বন্ধের সময় লিখুন]</p></div>
-    <div class="contactbox"><h3>ফোন ও অনলাইন যোগাযোগ</h3><p>ফোন: [আপনার মোবাইল নম্বর]</p><p>WhatsApp: [WhatsApp নম্বর, থাকলে]</p><p>Google Maps: [দোকানের Maps লিংক যোগ করুন]</p><p class="note" style="text-align:left">প্রকাশের আগে বন্ধনীর ভেতরের তথ্যগুলো আপনার সঠিক তথ্য দিয়ে বদলে নিন।</p></div>
-  </div>
-</div></section>
+<details class="service">
+<summary>🖥️ ২. কম্পিউটার কম্পোজ</summary>
+<div class="service-content">
+<ul>
+<li>আবেদনপত্র ও অঙ্গীকারনামা</li>
+<li>হলফনামা ও চুক্তিপত্র</li>
+<li>দলিল ও বিভিন্ন অফিসিয়াল কাগজ</li>
+<li>Word ও PDF ফাইল তৈরি</li>
+<li>টেবিল ও হিসাবের শিট</li>
+<li>ডকুমেন্ট সম্পাদনা ও ফরম্যাটিং</li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🪪 ৩. জাতীয় পরিচয়পত্র (NID) সেবা</summary>
+<div class="service-content">
+<ul>
+<li>নতুন ভোটার নিবন্ধন আবেদন</li>
+<li>NID তথ্য সংশোধন</li>
+<li>NID পুনর্মুদ্রণ আবেদন</li>
+<li>NID অনলাইন কপি ডাউনলোড</li>
+<li>ভোটার তথ্য যাচাই</li>
+<li>ভোটার নিবন্ধন সংক্রান্ত সহায়তা</li>
+<li><a href="https://services.nidw.gov.bd/" target="_blank">NID Online Services →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>📜 ৪. জন্ম ও মৃত্যু নিবন্ধন</summary>
+<div class="service-content">
+<ul>
+<li>নতুন জন্ম নিবন্ধন আবেদন</li>
+<li>জন্ম নিবন্ধন সংশোধন</li>
+<li>জন্ম নিবন্ধন যাচাই</li>
+<li>জন্ম নিবন্ধন সনদ ডাউনলোড</li>
+<li>মৃত্যু নিবন্ধন আবেদন</li>
+<li>মৃত্যু নিবন্ধন যাচাই</li>
+<li><a href="https://bdris.gov.bd/" target="_blank">BDRIS Online →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🌐 ৫. পাসপোর্ট ও ইমিগ্রেশন</summary>
+<div class="service-content">
+<ul>
+<li>নতুন ই-পাসপোর্ট আবেদন</li>
+<li>পাসপোর্ট নবায়ন</li>
+<li>পাসপোর্ট তথ্য সংশোধন সংক্রান্ত সহায়তা</li>
+<li>অনলাইন আবেদন ফরম পূরণ</li>
+<li>আবেদনের অবস্থা যাচাই</li>
+<li><a href="https://www.epassport.gov.bd/" target="_blank">e-Passport Portal →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>💼 ৬. চাকরির আবেদন</summary>
+<div class="service-content">
+<ul>
+<li>সরকারি চাকরির অনলাইন আবেদন</li>
+<li>বেসরকারি চাকরির আবেদন</li>
+<li>Teletalk চাকরির আবেদন</li>
+<li>চাকরির প্রবেশপত্র ডাউনলোড</li>
+<li>চাকরির ফলাফল দেখা</li>
+<li>আবেদন ফি প্রদানের নির্দেশনা</li>
+<li><a href="https://alljobs.teletalk.com.bd/" target="_blank">All Jobs Teletalk →</a></li>
+<li><a href="https://bpsc.gov.bd/" target="_blank">Bangladesh Public Service Commission →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>📄 ৭. CV ও বায়োডাটা তৈরি</summary>
+<div class="service-content">
+<ul>
+<li>বাংলা CV</li>
+<li>ইংরেজি CV / Resume</li>
+<li>Europass CV</li>
+<li>চাকরির Cover Letter</li>
+<li>ব্যক্তিগত বায়োডাটা</li>
+<li>অভিজ্ঞতার বিবরণ তৈরি</li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🏡 ৮. ভূমি সেবা</summary>
+<div class="service-content">
+<ul>
+<li>অনলাইন নামজারি আবেদন</li>
+<li>নামজারি খতিয়ান</li>
+<li>জমির পর্চা আবেদন</li>
+<li>খতিয়ান অনুসন্ধান</li>
+<li>ভূমি উন্নয়ন কর পরিশোধ</li>
+<li>দাখিলা ডাউনলোড</li>
+<li><a href="https://land.gov.bd/" target="_blank">ভূমি মন্ত্রণালয় →</a></li>
+<li><a href="https://mutation.land.gov.bd/" target="_blank">ই-নামজারি →</a></li>
+<li><a href="https://eporcha.gov.bd/" target="_blank">ই-পর্চা →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>👮 ৯. পুলিশ ক্লিয়ারেন্স</summary>
+<div class="service-content">
+<ul>
+<li>পুলিশ ক্লিয়ারেন্স আবেদন</li>
+<li>অনলাইন ফরম পূরণ</li>
+<li>আবেদনের স্ট্যাটাস দেখা</li>
+<li>সনদ সংক্রান্ত সহায়তা</li>
+<li><a href="https://pcc.police.gov.bd/" target="_blank">Police Clearance Portal →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🎓 ১০. শিক্ষা ও ভর্তি সেবা</summary>
+<div class="service-content">
+<ul>
+<li>একাদশ শ্রেণিতে ভর্তি আবেদন</li>
+<li>বিশ্ববিদ্যালয় ভর্তি আবেদন</li>
+<li>জাতীয় বিশ্ববিদ্যালয়ের আবেদন</li>
+<li>পরীক্ষার ফলাফল দেখা</li>
+<li>প্রবেশপত্র ডাউনলোড</li>
+<li>রেজিস্ট্রেশন সংক্রান্ত কাজ</li>
+<li><a href="https://xiclassadmission.gov.bd/" target="_blank">একাদশ শ্রেণির ভর্তি →</a></li>
+<li><a href="https://www.nu.ac.bd/" target="_blank">জাতীয় বিশ্ববিদ্যালয় →</a></li>
+<li><a href="https://www.educationboardresults.gov.bd/" target="_blank">শিক্ষা বোর্ডের ফলাফল →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>💰 ১১. আয়কর ও ই-টিন সেবা</summary>
+<div class="service-content">
+<ul>
+<li>ই-টিন নিবন্ধন</li>
+<li>ই-টিন সার্টিফিকেট ডাউনলোড</li>
+<li>অনলাইন আয়কর রিটার্ন</li>
+<li>আয়কর সংক্রান্ত তথ্য</li>
+<li>ট্যাক্স রিটার্ন জমা দেওয়ার সহায়তা</li>
+<li><a href="https://etaxnbr.gov.bd/" target="_blank">NBR e-Tax →</a></li>
+<li><a href="https://secure.incometax.gov.bd/" target="_blank">e-TIN →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🚗 ১২. ড্রাইভিং লাইসেন্স ও BRTA</summary>
+<div class="service-content">
+<ul>
+<li>ড্রাইভিং লাইসেন্স আবেদন</li>
+<li>লার্নার লাইসেন্স আবেদন</li>
+<li>স্মার্ট কার্ড লাইসেন্স সংক্রান্ত কাজ</li>
+<li>গাড়ির রেজিস্ট্রেশন তথ্য</li>
+<li>ফিটনেস ও ট্যাক্স টোকেন সংক্রান্ত সহায়তা</li>
+<li><a href="https://bsp.brta.gov.bd/" target="_blank">BRTA Service Portal →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🖼️ ১৩. ছবি ও ডকুমেন্ট প্রস্তুত</summary>
+<div class="service-content">
+<ul>
+<li>পাসপোর্ট সাইজ ছবি</li>
+<li>ছবি রিসাইজ</li>
+<li>অনলাইন আবেদনের ছবি প্রস্তুত</li>
+<li>স্বাক্ষর রিসাইজ</li>
+<li>PDF তৈরি ও কমপ্রেস</li>
+<li>ছবি ও ডকুমেন্টের সাইজ পরিবর্তন</li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🖨️ ১৪. প্রিন্টিং ও ফটোকপি</summary>
+<div class="service-content">
+<ul>
+<li>সাদা-কালো প্রিন্ট</li>
+<li>রঙিন প্রিন্ট</li>
+<li>ফটোকপি</li>
+<li>ডকুমেন্ট স্ক্যান</li>
+<li>PDF স্ক্যান</li>
+<li>লেমিনেটিং</li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>✉️ ১৫. ই-মেইল ও ইন্টারনেট সেবা</summary>
+<div class="service-content">
+<ul>
+<li>নতুন ই-মেইল অ্যাকাউন্ট তৈরি</li>
+<li>ই-মেইল পাঠানো ও গ্রহণ</li>
+<li>ফাইল আপলোড ও ডাউনলোড</li>
+<li>অনলাইন তথ্য অনুসন্ধান</li>
+<li>অনলাইন ফরম পূরণ</li>
+<li>প্রয়োজনীয় ওয়েবসাইট ব্যবহার</li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🚆 ১৬. রেলওয়ে ও অনলাইন টিকিট</summary>
+<div class="service-content">
+<ul>
+<li>ট্রেনের টিকিট বুকিং</li>
+<li>ট্রেনের সময়সূচি দেখা</li>
+<li>টিকিট ডাউনলোড</li>
+<li>টিকিট সংক্রান্ত তথ্য</li>
+<li><a href="https://eticket.railway.gov.bd/" target="_blank">Bangladesh Railway E-Ticket →</a></li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>📱 ১৭. মোবাইল ব্যাংকিং ও ডিজিটাল সেবা</summary>
+<div class="service-content">
+<ul>
+<li>বিকাশ সংক্রান্ত সেবা</li>
+<li>নগদ সংক্রান্ত সেবা</li>
+<li>রকেট সংক্রান্ত সেবা</li>
+<li>মোবাইল রিচার্জ</li>
+<li>অনলাইন বিল পরিশোধে সহায়তা</li>
+</ul>
+</div></details>
+
+<details class="service">
+<summary>🏛️ ১৮. সরকারি অন্যান্য অনলাইন সেবা</summary>
+<div class="service-content">
+<ul>
+<li>myGov আবেদন</li>
+<li>সরকারি ফরম ডাউনলোড</li>
+<li>বিভিন্ন সনদ ও প্রত্যয়ন আবেদন</li>
+<li>সরকারি প্রশিক্ষণের আবেদন</li>
+<li>কৃষি ও মৎস্য বিষয়ক অনলাইন সেবা</li>
+<li>সামাজিক নিরাপত্তা ভাতার আবেদন</li>
+<li>সরকারি বিভিন্ন তথ্য ও সেবা</li>
+<li><a href="https://www.mygov.bd/" target="_blank">myGov →</a></li>
+<li><a href="https://bangladesh.gov.bd/" target="_blank">বাংলাদেশ জাতীয় তথ্য বাতায়ন →</a></li>
+</ul>
+</div></details>
+
+</section>
+
+<div class="note">
+<strong>বিশেষ দ্রষ্টব্য:</strong> এই ওয়েবসাইটটি সেবা ও তথ্য প্রদানের জন্য। সরকারি আবেদন, যাচাই ও ফি সংশ্লিষ্ট সরকারি পোর্টালের নিয়ম অনুযায়ী সম্পন্ন হবে। কোনো সরকারি অনুমোদন বা নিশ্চয়তার দাবি করা হচ্ছে না।
+</div>
+
+<section class="contact" id="contact">
+<h2>📞 যোগাযোগ</h2>
+<div class="contact-grid">
+<div class="contact-item"><b>প্রতিষ্ঠানের নাম</b>Gopalganj Typing &amp; Digital Center</div>
+<div class="contact-item"><b>ঠিকানা</b>এখানে দোকানের ঠিকানা লিখুন</div>
+<div class="contact-item"><b>মোবাইল নম্বর</b>এখানে মোবাইল নম্বর লিখুন</div>
+<div class="contact-item"><b>খোলার সময়</b>এখানে সময়সূচি লিখুন</div>
+</div>
+</section>
 </main>
-<footer><div class="wrap">© <span id="year">2026</span> <strong>Gopalganj Typing & Digital Center</strong> — সর্বস্বত্ব সংরক্ষিত।</div></footer>
-</body></html>
+
+<footer>
+© <span id="year"></span> Gopalganj Typing &amp; Digital Center<br>
+সর্বস্বত্ব সংরক্ষিত।
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const search=document.getElementById("search");
+const cards=document.querySelectorAll(".service");
+
+search.addEventListener("input",function(){
+ const query=this.value.toLowerCase().trim();
+ cards.forEach(function(card){
+  const matched=card.innerText.toLowerCase().includes(query);
+  card.classList.toggle("hidden",!matched);
+  if(query && matched) card.open=true;
+  if(!query) card.open=false;
+ });
+});
+</script>
+</body>
+</html>
